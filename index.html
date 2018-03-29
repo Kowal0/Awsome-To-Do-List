@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="utf-8">
     <title>Awsome To-Do</title>
@@ -8,10 +9,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-  <section>
+
+  <div class="container">
     <header>
-      <h1>Stuff To Do TEST12132323</h1>
+    <form action="/">
+        <h1>Stuff To Do</h1>
+        <input class="newTask" type="text" placeholder="New task">
+        <label>Date<input title="date" class="newDate" type="date"></label>
+        <label>Hour<input title="time" class="newTime" type="time"></label>
+        <label>Priority<input class="priority" type="number"></label>
+        <button class="addTask" type="submit">ADD</button>
+    </form>
     </header>
-  </section>
+
+        <nav>
+          <label><input type="checkbox" name="sort" value="done">Stuff Done</label>
+          <label><input type="checkbox" name="sort" value="priority">Priorities</label>
+        </nav>
+      <section class="list">
+        <div class="box">
+          <ul class="text">
+            <li>Kupic mleko</li>
+            <li>12-02-2019</li>
+            <li>12:15</li>
+          </ul>
+          <button class="delete" type="button">X</button>
+          <input class="doneOrNot" type="checkbox" name="sort" value="done">Done
+        </div>
+      </section>
+  </div>
+
   </body>
 </html>
