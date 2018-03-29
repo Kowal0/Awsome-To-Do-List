@@ -12,29 +12,28 @@
 
   <div class="container">
     <header>
+          <h1>Stuff To Do</h1>
+     </header>
     <form action="/">
-        <h1>Stuff To Do</h1>
         <input class="newTask" type="text" placeholder="New task">
         <label>Date<input title="date" class="newDate" type="date"></label>
         <label>Hour<input title="time" class="newTime" type="time"></label>
         <label>Priority<input class="priority" type="number"></label>
         <button class="addTask" type="submit">ADD</button>
     </form>
-    </header>
 
         <nav>
-          <label><input type="checkbox" name="sort" value="done">Stuff Done</label>
-          <label><input type="checkbox" name="sort" value="priority">Priorities</label>
+              <button type="button" class="stuffDone">Stuff Done</button>
+          <button type="button" class="Priority">Priorities</button>
         </nav>
       <section class="list">
         <div class="box">
           <ul class="text">
-            <li>Kupic mleko</li>
+            <li>Kupic mleko  <button class="delete" type="button">X</button>
+          <input class="doneOrNot" type="checkbox" name="sort" value="done">Done</li>
             <li>12-02-2019</li>
             <li>12:15</li>
           </ul>
-          <button class="delete" type="button">X</button>
-          <input class="doneOrNot" type="checkbox" name="sort" value="done">Done
         </div>
       </section>
   </div>
