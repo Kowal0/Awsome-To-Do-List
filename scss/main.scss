@@ -84,10 +84,36 @@ header {
 }
 
 .form {
-  .show-form {
-    // display: flex;
-    // justify-content: center;
-    margin: 0 auto;
+  .form-button {
+    display: flex;
+    justify-content: center;
+    button{
+      background-color: $li-background-color;
+      border: 1px solid $border-color;
+      outline: none;
+      padding: 0.5rem;
+      border-radius: 0.4rem;
+    }
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    input {
+      border: 1px solid $border-color;
+    }
+    input[type="text"] {
+      
+    }
+    input[type="date"] {
+
+    }
+    input[type="time"] {
+
+    }
+    input[type="submit"] {
+
+    }
   }
 }
 // mobile width max 480px
