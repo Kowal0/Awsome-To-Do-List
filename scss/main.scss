@@ -15,7 +15,6 @@ html {
 
 .container {
   background-color: $main-background-color;
-  height: 100vh;
 }
 
 header {
@@ -43,7 +42,8 @@ i {
   margin-bottom: 1.25rem;
   .filters-done {
     display: flex;
-    border: 1px solid $border-color;
+    align-items: center;
+    border: 3px solid $border-color;
     background-color: $li-background-color;
     font-weight: bold;
     padding: 0.5rem 0.5rem;
@@ -53,7 +53,8 @@ i {
   }
   .filters-priorities {
     display: flex;
-    border: 1px solid $border-color;
+    align-items: center;
+    border: 3px solid $border-color;
     background-color: $li-background-color;
     font-weight: bold;
     padding: 0.5rem 0.5rem;
@@ -73,7 +74,7 @@ i {
     background-color: $li-background-color;
     padding: 0.75rem;
     margin: 0.75rem;
-    border: 1px solid $border-color;
+    border: 3px solid $border-color;
     .list-checkboxes {
       display: flex;
       flex-direction: column;
@@ -88,6 +89,9 @@ i {
     }
     .list-delete {
       align-self: flex-start;
+      color: $border-color;
+      font-weight: bold;
+      font-style: normal;
     }
   }
 }
@@ -98,30 +102,78 @@ i {
     justify-content: center;
     button {
       background-color: $li-background-color;
-      border: 1px solid $border-color;
+      border: 3px solid $border-color;
       outline: none;
       padding: 0.5rem;
       border-radius: 0.4rem;
+      color: darken($border-color, 30);
     }
   }
   form {
+    margin-top: 1rem;
+  }
+  label {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    flex-wrap: wrap;
     input {
       border: 1px solid $border-color;
     }
     input[type="text"] {
-
+      flex-grow: 1;
+      font-style: italic;
+      list-style: none;
+      font-size: 1rem;
+      background-color: $li-background-color;
+      padding: 0.79rem;
+      margin-left: 0.75rem;
+      margin-top: 0.75rem;
+      margin-right: 0.75rem;
+      border: 3px solid $border-color;
+      border-bottom: none;
+      color: $border-color;
+      text-align: center;
     }
     input[type="date"] {
+      flex-grow: 1;
+      display: flex;
+      font-style: italic;
+      list-style: none;
+      font-size: 1rem;
+      background-color: $li-background-color;
+      padding: 0.75rem;
+      margin-bottom: 0.20rem;
+      margin-left: 0.75rem;
+      border: 3px solid $border-color;
+      border-right: 1px solid $border-color;
+      color: $border-color;
 
     }
     input[type="time"] {
+      flex-grow: 1.5;
+      display: flex;
+      font-style: italic;
+      list-style: none;
+      font-size: 1rem;
+      background-color: $li-background-color;
+      padding: 0.75rem;
+      margin-bottom: 0.20rem;
+      margin-right: 0.75rem;
+      border: 3px solid $border-color;
+      border-left: none;
+      color: $border-color;
 
     }
     input[type="submit"] {
-
+      background-color: $li-background-color;
+      border: 3px solid $border-color;
+      outline: none;
+      padding: 0.70rem;
+      margin: 0.30rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 0.4rem;
+      color: darken($border-color, 20);
     }
   }
 }
