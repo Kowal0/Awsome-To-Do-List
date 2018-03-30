@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Awsome To-Do</title>
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700&amp;subset=latin-ext" rel="stylesheet">
     <script type="text/javascript" src="js/app.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
@@ -13,8 +14,8 @@
         <h1>Stuff To Do</h1>
       </header>
       <section class="filters">
-        <div class="filters-done"><i></i>Stuff Done</div>
-        <div class="filters-priorities"><i></i>Priorities</div>
+        <div class="filters-done"><div class="icon"><i>x</i></div>Stuff Done</div>
+        <div class="filters-priorities"><div class="icon"><i>x</i></div>Priorities</div>
       </section>
       <section class="list">
         <ul>
@@ -23,8 +24,10 @@
               <label><input type="checkbox" name="done"></label>
               <label><input type="checkbox" name="priority"></label>
             </div>
-            <div class="list-text">Kup kaszę oraz mleko</div>
-            <div class="list-date">22-10-2019 10:30</div>
+            <div class="list-content">
+              <div class="list-content-text">Kup kaszę oraz mleko</div>
+              <div class="list-content-date">22-10-2019 10:30</div>
+            </div>
             <div class="list-delete">X</div>
           </li>
           <li>
@@ -32,8 +35,10 @@
               <label><input type="checkbox" name="done"></label>
               <label><input type="checkbox" name="priority"></label>
             </div>
-            <div class="list-text">Upiecz ciasto</div>
-            <div class="list-date">22-10-2019 10:30</div>
+            <div class="list-content">
+              <div class="list-content-text">Kup kaszę oraz mleko</div>
+              <div class="list-content-date">22-10-2019 10:30</div>
+            </div>
             <div class="list-delete">X</div>
           </li>
         </ul>
