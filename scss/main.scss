@@ -29,6 +29,13 @@ header {
   }
 }
 
+i {
+  width: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $main-background-color;
+}
+
 .filters {
   display: flex;
   justify-content: center;
@@ -69,6 +76,7 @@ header {
     .list-checkboxes {
       display: flex;
       flex-direction: column;
+
     }
     .list-content {
       padding-left: 1rem;
@@ -87,7 +95,7 @@ header {
   .form-button {
     display: flex;
     justify-content: center;
-    button{
+    button {
       background-color: $li-background-color;
       border: 1px solid $border-color;
       outline: none;
@@ -103,7 +111,7 @@ header {
       border: 1px solid $border-color;
     }
     input[type="text"] {
-      
+
     }
     input[type="date"] {
 
