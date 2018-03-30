@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html"
-      xmlns="http://www.w3.org/1999/html">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Awsome To-Do</title>
@@ -9,34 +8,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-
-  <div class="container">
-    <header>
-          <h1>Stuff To Do</h1>
-     </header>
-    <form action="/">
-        <input class="newTask" type="text" placeholder="New task">
-        <label>Date<input title="date" class="newDate" type="date"></label>
-        <label>Hour<input title="time" class="newTime" type="time"></label>
-        <label>Priority<input class="priority" type="number"></label>
-        <button class="addTask" type="submit">ADD</button>
-    </form>
-
-        <nav>
-              <button type="button" class="stuffDone">Stuff Done</button>
-          <button type="button" class="Priority">Priorities</button>
-        </nav>
-      <section class="list">
-        <div class="box">
-          <ul class="text">
-            <li>Kupic mleko  <button class="delete" type="button">X</button>
-          <input class="doneOrNot" type="checkbox" name="sort" value="done">Done</li>
-            <li>12-02-2019</li>
-            <li>12:15</li>
-          </ul>
-        </div>
+    <div class="container">
+      <header>
+        <h1>Stuff To Do</h1>
+      </header>
+      <section class="filters">
+        <div class="filters-done"><i></i>Stuff Done</div>
+        <div class="filters-priorities"><i></i>Priorities</div>
       </section>
-  </div>
-
+      <section class="list">
+        <ul>
+          <li>
+            <div class="list-checkboxes">
+              <label><input type="checkbox" name="done"></label>
+              <label><input type="checkbox" name="priority"></label>
+            </div>
+            <div class="list-text">Kup kaszę oraz mleko</div>
+            <div class="list-date">22-10-2019 10:30</div>
+            <div class="list-delete">X</div>
+          </li>
+          <li>
+            <div class="list-checkboxes">
+              <label><input type="checkbox" name="done"></label>
+              <label><input type="checkbox" name="priority"></label>
+            </div>
+            <div class="list-text">Upiecz ciasto</div>
+            <div class="list-date">22-10-2019 10:30</div>
+            <div class="list-delete">X</div>
+          </li>
+        </ul>
+      </section>
+      <section class="form">
+        <button class="show-form">Add a new To-Do</button>
+        <form class="" action="#" method="post">
+          <input type="text" name="text" value="">
+          <input type="date" name="date" value="">
+          <input type="time" name="time" value="">
+        </form>
+      </section>
+    </div>
   </body>
 </html>
