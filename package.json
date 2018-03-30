@@ -12,7 +12,17 @@
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
-    "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.4"
-  }
+  },
+  "devDependencies": {
+    "gulp-sass": "^3.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kowal0/Awsome-To-Do-List.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kowal0/Awsome-To-Do-List/issues"
+  },
+  "homepage": "https://github.com/Kowal0/Awsome-To-Do-List#readme"
 }
