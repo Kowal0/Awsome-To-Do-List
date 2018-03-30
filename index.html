@@ -8,10 +8,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-  <section>
-    <header>
-      <h1>Stuff To Do</h1>
-    </header>
-  </section>
+    <div class="container">
+      <header>
+        <h1>Stuff To Do</h1>
+      </header>
+      <section class="filters">
+        <div class="filters-done"><i></i>Stuff Done</div>
+        <div class="filters-priorities"><i></i>Priorities</div>
+      </section>
+      <section class="list">
+        <ul>
+          <li>
+            <div class="list-checkboxes">
+              <label><input type="checkbox" name="done"></label>
+              <label><input type="checkbox" name="priority"></label>
+            </div>
+            <div class="list-text">Kup kaszę oraz mleko</div>
+            <div class="list-date">22-10-2019 10:30</div>
+            <div class="list-delete">X</div>
+          </li>
+          <li>
+            <div class="list-checkboxes">
+              <label><input type="checkbox" name="done"></label>
+              <label><input type="checkbox" name="priority"></label>
+            </div>
+            <div class="list-text">Upiecz ciasto</div>
+            <div class="list-date">22-10-2019 10:30</div>
+            <div class="list-delete">X</div>
+          </li>
+        </ul>
+      </section>
+      <section class="form">
+        <button class="show-form">Add a new To-Do</button>
+        <form class="" action="#" method="post">
+          <input type="text" name="text" value="">
+          <input type="date" name="date" value="">
+          <input type="time" name="time" value="">
+        </form>
+      </section>
+    </div>
   </body>
 </html>
