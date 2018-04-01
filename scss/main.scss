@@ -70,7 +70,8 @@ i {
     display: flex;
     font-style: italic;
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    font-weight: 300;
     background-color: $li-background-color;
     padding: 0.75rem;
     margin: 0.75rem;
@@ -115,58 +116,40 @@ i {
   label {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     input {
-      border: 1px solid $border-color;
-    }
-    input[type="text"] {
-      flex-grow: 1;
+      border: 3px solid $border-color;
       font-style: italic;
       list-style: none;
       font-size: 1rem;
       background-color: $li-background-color;
+      color: $border-color;
+      text-align: center;
+    }
+    input[type="text"] {
+      flex-grow: 1;
       padding: 0.79rem;
       margin-left: 0.75rem;
       margin-top: 0.75rem;
       margin-right: 0.75rem;
-      border: 3px solid $border-color;
       border-bottom: none;
-      color: $border-color;
-      text-align: center;
     }
     input[type="date"] {
       flex-grow: 1;
       display: flex;
-      font-style: italic;
-      list-style: none;
-      font-size: 1rem;
-      background-color: $li-background-color;
       padding: 0.75rem;
       margin-bottom: 0.20rem;
       margin-left: 0.75rem;
-      border: 3px solid $border-color;
       border-right: 1px solid $border-color;
-      color: $border-color;
-
     }
     input[type="time"] {
       flex-grow: 1.5;
       display: flex;
-      font-style: italic;
-      list-style: none;
-      font-size: 1rem;
-      background-color: $li-background-color;
       padding: 0.75rem;
       margin-bottom: 0.20rem;
       margin-right: 0.75rem;
-      border: 3px solid $border-color;
       border-left: none;
-      color: $border-color;
-
     }
     input[type="submit"] {
-      background-color: $li-background-color;
-      border: 3px solid $border-color;
       outline: none;
       padding: 0.70rem;
       margin: 0.30rem;
