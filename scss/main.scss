@@ -15,7 +15,25 @@ html {
 
 .container {
   background-color: $main-background-color;
+  height: 100vh;
 }
+
+//klasy używane do efektów
+
+.done {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+
+
+// elementy strony
 
 header {
   h1 {
@@ -112,6 +130,13 @@ i {
   }
   form {
     margin-top: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.5s, opacity 0.5s linear;
+  }
+  .form-date-time {
+    display: flex;
+    justify-content: center;
   }
   label {
     display: flex;
