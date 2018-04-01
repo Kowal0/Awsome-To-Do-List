@@ -78,8 +78,10 @@ showForm.addEventListener("click", function() {
   var form = document.querySelector(".form form");
     form.style.visibility = "visible";
     form.style.opacity = "1";
-    //schowaj formularz
 
+    //schowaj button showForm
+    showForm.style.visibility = "hidden";
+    showForm.style.opacity = "0";
 });
 
 submit.addEventListener("click", function(e) {
@@ -135,6 +137,10 @@ submit.addEventListener("click", function(e) {
     newDelete.appendChild(newDeleteButton);
     newDeleteButton.classList.add("list-delete-button");
     newDeleteButton.innerText = "X";
+
+    // pokaż button showForm
+    showForm.style.visibility = "visible";
+    showForm.style.opacity = "1";
 
     // zresetuj pola formularza
     inputText.value = "";
