@@ -3,6 +3,46 @@ document.addEventListener("DOMContentLoaded", function() {
 var list = document.querySelector(".list ul");
 var showForm = document.querySelector(".form-button button");
 var submit = document.querySelector("form input[type='submit']");
+var filtersDone = document.querySelector(".filters-done");
+var filtersPriorities = document.querySelector(".filters-priorities");
+
+// filtrowanie po zadaniach wykonanych
+
+filtersDone.addEventListener("click", function() {
+  filtersDone.classList.toggle("filters-done-active");
+  if (filtersDone.className === "filters-done filters-done-active") {
+    filtersDone.style.backgroundColor = "#d6b98c";
+    for (var i = 0; i < list.children.length; i++) {
+      if (list.children[i].firstElementChild.firstElementChild.className !== "ion-ios-checkmark-outline") {
+        list.children[i].style.display = "none";
+      }
+    }
+  } else if (filtersDone.className !== "filters-done filters-done-active") {
+    filtersDone.style.backgroundColor = "#FEDDA7";
+    for (var i = 0; i < list.children.length; i++) {
+        list.children[i].style.display = "flex";
+      }
+  }
+});
+
+//filtrowanie po priorytetach
+filtersPriorities.addEventListener("click", function() {
+  filtersPriorities.classList.toggle("filters-priorities-active");
+  if (filtersPriorities.className === "filters-priorities filters-priorities-active") {
+    filtersPriorities.style.backgroundColor = "#d6b98c";
+    for (var i = 0; i < list.children.length; i++) {
+      if (list.children[i].firstElementChild.lastElementChild.className !== "ion-android-star") {
+        list.children[i].style.display = "none";
+      }
+    }
+  } else if (filtersPriorities.className !== "filters-priorities filters-priorities-active") {
+    filtersPriorities.style.backgroundColor = "#FEDDA7";
+    for (var i = 0; i < list.children.length; i++) {
+        list.children[i].style.display = "flex";
+      }
+  }
+});
+
 
 list.addEventListener("click", function(e) {
   // oznaczanie elementów jako ukończone
@@ -44,9 +84,6 @@ showForm.addEventListener("click", function() {
 
 submit.addEventListener("click", function(e) {
   e.preventDefault();
-
-
-
 
   var inputText = document.querySelector("form input[type='text']");
   var inputDate = document.querySelector("form input[type='date']");
@@ -99,12 +136,11 @@ submit.addEventListener("click", function(e) {
     newDeleteButton.classList.add("list-delete-button");
     newDeleteButton.innerText = "X";
 
-
-    console.log(inputDate.value.length);
-    console.log(inputTime.value.length);
+    // zresetuj pola formularza
+    inputText.value = "";
+    inputDate.value = "";
+    inputTime.value = "";
   }
-
-
 });
 
 
