@@ -39,35 +39,70 @@ showForm.addEventListener("click", function() {
     form.style.visibility = "visible";
     form.style.opacity = "1";
     //schowaj formularz
-    // form.style.visibility = "hidden";
-    // form.style.opacity = "0";
+
 });
 
 submit.addEventListener("click", function(e) {
   e.preventDefault();
-  //stworzenie wszystkich elementów
-  var newLi = document.createElement("li");
 
-  var newCheckboxes = document.createElement("div");
-  var newCheckboxesDone = document.createElement("i");
-  var newCheckboxesPriority = document.createElement("i");
 
-  var newContent = document.createElement("div");
-  var newContentText = document.createElement("div");
-  var newContentDate = document.createElement("div");
 
-  var newDelete = document.createElement("div");
-  var newDeleteButton = document.createElement("span");
 
-  //dodanie wszystkich elementów
-  list.appendChild(newLi);
-  newLi.appendChild(newCheckboxes);
-  newCheckboxes.classList.add("list-checkboxes");
+  var inputText = document.querySelector("form input[type='text']");
+  var inputDate = document.querySelector("form input[type='date']");
+  var inputTime = document.querySelector("form input[type='time']");
 
-  newLi.appendChild(newContent);
+  if (inputText.value.length === 0 || inputDate.value.length === 0 || inputTime.value.length === 0) {
+    console.log("Ya hafta write sth m8");
+  } else {
+    //schowaj formularz
+    var form = document.querySelector(".form form");
+    form.style.visibility = "hidden";
+    form.style.opacity = "0";
 
-  newLi.appendChild(newDelete);
+    //stworzenie wszystkich elementów
+    var newLi = document.createElement("li");
 
+    var newCheckboxes = document.createElement("div");
+    var newCheckboxesDone = document.createElement("i");
+    var newCheckboxesPriority = document.createElement("i");
+
+    var newContent = document.createElement("div");
+    var newContentText = document.createElement("div");
+    var newContentDate = document.createElement("div");
+
+    var newDelete = document.createElement("div");
+    var newDeleteButton = document.createElement("span");
+
+
+    list.appendChild(newLi);
+    //dodanie ikon i ich klas
+    newLi.appendChild(newCheckboxes);
+    newCheckboxes.classList.add("list-checkboxes");
+    newCheckboxes.appendChild(newCheckboxesDone);
+    newCheckboxesDone.classList.add("ion-ios-circle-outline");
+    newCheckboxes.appendChild(newCheckboxesPriority);
+    newCheckboxesPriority.classList.add("ion-android-star-outline");
+    //dodanie treści i daty
+    newLi.appendChild(newContent);
+    newContent.classList.add("list-content");
+    newContent.appendChild(newContentText);
+    newContentText.classList.add("list-content-text");
+    newContentText.innerText = inputText.value;
+    newContent.appendChild(newContentDate);
+    newContentDate.classList.add("list-content-date");
+    newContentDate.innerText = inputDate.value.split("-").reverse().join("-") + " " + inputTime.value;
+    //dodanie delete button
+    newLi.appendChild(newDelete);
+    newDelete.classList.add("list-delete");
+    newDelete.appendChild(newDeleteButton);
+    newDeleteButton.classList.add("list-delete-button");
+    newDeleteButton.innerText = "X";
+
+
+    console.log(inputDate.value.length);
+    console.log(inputTime.value.length);
+  }
 
 
 });
